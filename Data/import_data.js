@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-dotenv.config({path: "./.env"});
+dotenv.config({path: "../.env"});
 
 const fs = require('fs');
 const Van = require('../model/vanmodel');
