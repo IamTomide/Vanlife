@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #000000;
+}
+
+.About{
+    background-color: #FFF7ED;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    background: #FFF7ED;
+    padding: 1em 0;
+}
+
+.headerdiv{
+    display: flex;
+    justify-content: space-between;
+}
+.headerdiv > a{
+    color: black;
+    text-decoration: none;
+}
+
+header h1{
+    padding: 1em 0;
+    font-size: 1.585rem;
+    font-weight: 900;
+}
+nav {
+    display: flex;
+}
+nav li{
+    list-style: none;
+    padding: 0 1em; 
+    margin: auto 0;
+}
+nav a{
+    color: #4D4D4D;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    font-weight: 900;
+}
+.currentpage {
+    border-bottom: solid 2px black;
+}
+.currentpage:hover{
+    text-decoration: none;
+    font-weight: 700;
+} 
+.simplestatus:hover, .Simple{
+    color: #FFEAD0;
+    background-color: #E17654;
+}
+.luxurystatus:hover, .Luxury{
+    color: #FFEAD0;
+    background-color: #000000;
+}
+.ruggedstatus:hover, .Rugged{
+    color: #FFEAD0;
+    background-color: #115E59;
+}
+.homeinfo {
+    background-image:  url(/images/image\ 54.png);
+    background-color: #00000075;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: white;
+}
+.info {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4.5em 0;
+}
+.signin {
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 1em;
+    margin: 0;
+    border: solid 1px grey;
+    font-size: 1.125rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 800;
+}
+section p{
+    font-size: 1.125rem;
+}
+.introp{
+    padding: 0.5em 0 2em;
+}
+
+.explore1{
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1em 0;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background-color: rgba(255, 140, 56, 1);
+    margin: 1em 0;
+    color: white;
+    font-weight: bold;
+}
+
+.return {
+    background-color: black;
+}
+
+footer{
+    background-color: #252525;
+    padding: 2em;
+    text-align: center;
+    font-weight: 500;
+    color: #AAAAAA;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.artimg{
+    width: 100%;
+}
+
+article{
+    font-weight: 500;
+}
+
+ .aboutimg{
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 2em;
+ }
+ .extra {
+    padding-bottom: 1em;
+ }
+
+ aside{
+    padding: 2em;
+    margin: 2em 0;
+    border-radius: 5px;
+    background-color: #FFCC8D;
+ }
+
+ aside h2{
+    font-size: 2rem;
+    padding: 0;
+ }
+
+ .explore2{
+    background-color: black;
+    margin: 1.5em 0;
+    padding: 1em;
+    border-radius: 10px;
+ }
+
+.explore2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    padding: 0 0.5em;
+}
+.vandiv{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+.vanimage{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.vanname{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 0.3em;
+}
+.back a{
+    color: #000000;
+    text-underline-offset: 2px;
+}
+.rate{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 1em;
+}
+.prodprice{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+.status{
+    flex-basis: 10%;
+    padding: 0.2em 1.5em;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+}
+.clear{
+    border: none;
+    background: none;
+    font-size: 1.125rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.vanlist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.vanlistitem{
+    margin-bottom: 2em;
+    flex-basis: 45%;
+}
+.vanlistitem a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.vanlistitem h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.vanlistimg {
+    border-radius: 10px;
+    width: 100%;
+}
+.descbox{
+    display: flex;
+    margin-top: 0.5em;
+    justify-content: space-between;
+}
+
+.namestatus{
+    flex-basis: 75%;
+}
+.price{
+    font-size: 1.2rem;
+}
+.statusbox {
+    margin-top: 0.5em;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    border: none;
+    background-color: orange;
+    color: #FFF7ED;
+    font-size: 1.125rem;
+}
+
+.Rugged {
+    background-color: #115E59;
+}
+
+.Luxury{
+    background-color: #000000;
+}
+@media (max-width:560px) and (min-width:400px){
+    .status, .statusbox {
+        font-size: 90%;
+    }
+    .clear{
+        font-size: 90%;
+    }
+    .price{
+        font-size: 100%;
+    }
+    .vanlistitem h3{
+        font-size: 100%;
+    }
+}
+@media (max-width:400px) {
+    .status, .statusbox, .vanitem p{
+        font-size: 60%;
+    }
+    .clear{
+        font-size: 80%;
+    }
+    .price{
+        font-size: 80%;
+    }
+    .vanlistitem h3{
+        font-size: 80%;
+    }
+}
