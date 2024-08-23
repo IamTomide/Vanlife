@@ -4,7 +4,8 @@
   "description": "vans to explore for holidays",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Paulina",
   "license": "ISC",

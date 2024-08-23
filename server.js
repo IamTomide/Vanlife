@@ -4,7 +4,7 @@ dotenv.config();
 const app = require('./app');
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.CONN_STR)
+mongoose.connect(process.env.CONN_STR, { useNewUrlParser: true })
 .then((conn) => {
     console.log("DB connection successful");
 }).catch((error) => {
