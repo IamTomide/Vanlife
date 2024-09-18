@@ -1,0 +1,19 @@
+<li class="vanlisted newtemplate">
+    <div>
+        <form id="editvan" action="/update/{{%id%}}?_method=PATCH" method="post" enctype="multipart/form-data">
+            <!-- <input type="hidden" name="_method" value="PATCH"> -->
+            <input type="text" value="{{%name%}}" id="name" name="name" required>
+            <input type="file" value="{{%image%}}" id="image" name="image" accept="image/*" required>
+            <input type="text" value="{{%desc%}}" id="description" name="description" required>
+            <input type="number" value="{{%price%}}" id="price" name="price" required>
+            <select name="status" id="status" required>
+                <option value="">Van Status</option>
+                <option value="Simple">Simple</option>
+                <option value="Rugged">Rugged</option>
+                <option value="Luxury">Luxury</option>
+            </select>
+            <input type="submit" value="Edit Van" class="explore1">
+        </form>
+    </div>
+    
+</li>

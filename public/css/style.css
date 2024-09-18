@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -41,8 +41,11 @@ nav {
 }
 nav li{
     list-style: none;
-    padding: 0 1em; 
+    padding: 0 3em 0 0; 
     margin: auto 0;
+}
+nav li:last-child{
+    padding-right: 0;
 }
 nav a{
     color: #4D4D4D;
@@ -55,6 +58,14 @@ nav a:hover {
     text-decoration: underline;
     font-weight: 900;
 }
+.status{
+    flex-basis: 10%;
+    padding: 0.2em 1.5em;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+}
 .currentpage {
     border-bottom: solid 2px black;
 }
@@ -62,15 +73,15 @@ nav a:hover {
     text-decoration: none;
     font-weight: 700;
 } 
-.simplestatus:hover, .Simple{
-    color: #FFEAD0;
+.simplestatus:hover, .Simple, .selectedsimple{
     background-color: #E17654;
+    color: #FFEAD0;
 }
-.luxurystatus:hover, .Luxury{
+.luxurystatus:hover, .Luxury, .selectedluxury{
     color: #FFEAD0;
     background-color: #000000;
 }
-.ruggedstatus:hover, .Rugged{
+.ruggedstatus:hover, .Rugged, .selectedrugged{
     color: #FFEAD0;
     background-color: #115E59;
 }
@@ -82,17 +93,28 @@ nav a:hover {
     background-size: cover;
     color: white;
 }
+.login {
+    text-align: center;
+    padding: 2em 0 4.5em;
+}
+.signing{
+    text-align: center;
+    padding: 2em 0;
+}
 .info {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 0 4.5em;
+}
+.inform {
     width: 90%;
     max-width: 700px;
     margin: 0 auto;
     padding: 4.5em 0;
 }
-.signin {
-    text-align: center;
-}
 
-input{
+input, select{
     width: 100%;
     padding: 1em;
     margin: 0;
@@ -147,7 +169,7 @@ article{
 }
 
  .aboutimg{
-    max-height: 600px;
+    max-height: 400px;
     width: 100%;
     object-fit: cover;
     padding-bottom: 2em;
@@ -215,14 +237,7 @@ article{
     justify-content: space-between;
     padding: 2em 0;
 }
-.status{
-    flex-basis: 10%;
-    padding: 0.2em 1.5em;
-    border: none;
-    font-size: 1.3rem;
-    border-radius: 5px;
-    background-color: #FFEAD0;
-}
+
 .clear{
     border: none;
     background: none;
@@ -241,7 +256,7 @@ article{
     margin-bottom: 2em;
     flex-basis: 45%;
 }
-.vanlistitem a{
+.vanlistitem a, .vantemplate a{
     text-decoration: none;
     color: #000000;
 }
@@ -252,6 +267,7 @@ article{
 }
 .vanlistimg {
     border-radius: 10px;
+    min-height: 350px;
     width: 100%;
 }
 .descbox{
@@ -271,29 +287,34 @@ article{
     border-radius: 5px;
     padding: 0.5em 1em;
     border: none;
-    background-color: orange;
+    /* background-color: orange; */
     color: #FFF7ED;
     font-size: 1.125rem;
 }
 
-.Rugged {
+.createnew {
+    color: #FF8E3C;
+    text-decoration: none;
+}
+
+/* .Rugged, .ruggedselected{
     background-color: #115E59;
 }
 
-.Luxury{
+.Luxury, .luxuryselected{
     background-color: #000000;
-}
+} */
 @media (max-width:560px) and (min-width:400px){
     .status, .statusbox {
         font-size: 90%;
     }
-    .clear{
+    .clear, nav a{
         font-size: 90%;
     }
     .price{
         font-size: 100%;
     }
-    .vanlistitem h3{
+    .vanlistitem h3, .welcome, .details h2, .prodprice, .rate{
         font-size: 100%;
     }
 }
@@ -301,13 +322,153 @@ article{
     .status, .statusbox, .vanitem p{
         font-size: 60%;
     }
-    .clear{
-        font-size: 80%;
+    .clear, nav a{
+        font-size: 90%;
     }
     .price{
         font-size: 80%;
     }
-    .vanlistitem h3{
+    .vanlistitem h3, .details h2, .prodprice, .rate{
         font-size: 80%;
     }
+    nav li{
+        padding: 0 2em 0 0; 
+    }
+    .listvanimage {
+        width: 130px;
+        height: 120px;
+    }
+}
+
+
+/* Host style */
+.dashboard {
+    background-color: #FFEAD0;
+    padding: 1em 0 0;
+}
+.dashboardnav{
+    margin: 0 0 1em;
+    padding: 1.5em 0;
+}
+.welcome{
+    font-weight: 700;
+}
+.income {
+    padding: 1.5em 0;
+}
+.income a{
+    color: black;
+}
+.star{
+    color: #FF8E3C;
+}
+.review{
+    margin-top: 1em;
+    padding: 2em 0;
+    background-color: #FFDDB2;
+    margin-bottom: 2em;
+}
+.review p:first-of-type{
+    font-weight: bold;
+}
+.total{
+    color: #B19E86;
+    font-weight: normal;
+}
+.list{
+    margin:0.5em 0 1.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.view{
+    padding-top: 1em;
+}
+.vantemplate, .vanlisted{
+    display: flex;
+    justify-content: space-between;
+}
+.vantemplate div{
+    /* padding: 1em; */
+    margin: auto 0;
+    padding: 0 1em;
+}
+.listvanimage {
+    height: 200px;
+    width: 190px;
+    border-radius: 5px;
+    padding-right: 1em;
+}
+.listedvans ul{
+    padding: 0;
+}
+.listedvans li{
+    background-color: white;
+    margin: 0 0 1em;
+    padding: 1.5em;
+}
+
+.listedvans a, .vanlisted a, .viewall{
+    color: black;
+    text-decoration: none;
+}
+.edit {
+    margin: auto 0;
+    margin-top: 1.5em;
+}
+
+.listsect{
+    margin: 1em 0 3em;
+}
+
+.hostvan{
+    margin: 2em;
+    padding: 1em;
+    background-color: white;
+}
+
+.hostdesc{
+    display: flex;
+}
+
+.details{
+    margin: auto 0;
+}
+.details h2{
+    font-weight: 600;
+    padding: 0.4em 0;
+}
+
+.specs p{
+    padding: 1em 0;
+}
+.specs p:first-child{
+    padding-top: -1em;
+}
+.specs span{
+    font-weight: bold;
+}
+.pricing {
+    padding-top: 2em;
+}
+.photos {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+.yourlistimage {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.plus{
+    cursor: pointer;
+    padding: 0 1em;
+    font-size: 2rem;
+}
+.hidden{
+    display: none;
+}
+.logout{
+    text-align: right;
+    cursor: pointer;
 }

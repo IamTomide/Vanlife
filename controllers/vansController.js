@@ -63,7 +63,7 @@ exports.getAllVans = async(req, res) => {
 
 exports.getVan = async(req, res) => {
     try{
-        const van = await Van.findById(req.params.id);
+        const van = await Van.findById(req.params._id);
         res.status(200).json({
             status: 'success',
             data: {
@@ -97,7 +97,7 @@ exports.createVan = async(req, res) => {
 
 exports.updateVan = async(req, res) => {
     try{
-        const updatedvan = await Van.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true});
+        const updatedvan = await Van.findByIdAndUpdate(req.params._id, req.body, {new: true, runValidators: true});
         res.status(200).json({
             status: 'success',
             data: {
@@ -114,7 +114,7 @@ exports.updateVan = async(req, res) => {
 
 exports.deleteVan = async(req, res) => {
     try{
-        await Van.findByIdAndDelete(req.params.id);
+        await Van.findByIdAndDelete(req.params._id);
         res.status(204).json({
             status: 'success',
             data: {

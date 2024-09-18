@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/template/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Vanlife</title>
 </head>
 <body class="About">
@@ -24,9 +24,9 @@
     <div class="container">
         <h2>Explore our van options</h2>
         <div class="options">           
-            <a href="/vans/Simple"><button class="status simplestatus">Simple</button></a>
-            <a href="/vans/luxury"><button class="status luxurystatus">Luxury</button></a>
-            <a href="/vans/rugged"><button class="status ruggedstatus">Rugged</button></a>
+            <a href="/vans/status/Simple"><button class="status simplestatus {{selectedsimple}}">Simple</button></a>
+            <a href="/vans/status/Luxury"><button class="status luxurystatus {{selectedluxury}}">Luxury</button></a>
+            <a href="/vans/status/Rugged"><button class="status ruggedstatus {{selectedrugged}}">Rugged</button></a>
             <a href="/vans"><button class="clear">Clear filters</button></a>
         </div>
 

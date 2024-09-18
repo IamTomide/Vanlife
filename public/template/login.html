@@ -15,21 +15,28 @@
             <div class="headerdiv">
                 <a href="/home"><h1>#VANLIFE</h1></a>
                 <nav>
-                    <li><a href="">Host</a></li>
+                    <li><a href="/host">Host</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="vans">Vans</a></li>
+                    <li><img src="/images/Icon.png" alt="user"></li>
                 </nav>
             </div>
         </div>
     </header>
-    <section>
-        <div class="info">
-            <h2>Sorry, the page you were looking for was not found</h2>
-            <a href="/home"><button class="explore1 return">Return to home</button></a>
+    <form id="login">
+        
+        <h2 class="signing">Sign in to your account</h2>
+        <div class="info">   
+            <input type="text" id="email" placeholder="Email address"><br>
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            <input type="submit" class="explore1" value="Sign in">
+            <p class="login">Don't have an account? <a class="createnew" href="/signin">Create one now</a> </p>
         </div>  
-    </section>
+        
+    </form>
     <footer>
         <p>&copy; 2022 #vanlife</p>
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>

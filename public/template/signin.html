@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/template/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Vanlife</title>
 </head>
 <body class="About">
@@ -23,17 +23,18 @@
             </div>
         </div>
     </header>
-    <section>
-        <div class="info signin">
-            <h2>Sign in to your account</h2>
-            <input type="text" placeholder="Email address"><br>
-            <input type="text" placeholder="Password">
-            <a href="vans"><button class="explore1">Sign in</button></a>
-            <p>Don't have an account? Create one now</p>
+    <form id="signin">
+        <h2 class="signing">Create an account</h2>
+        <div class="info">   
+            <input type="text" id="name" placeholder="Name" autocomplete="name"><br>
+            <input type="text" id="email" placeholder="Email address" autocomplete="email"><br>
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            <input type="submit" class="explore1" value="Create">
         </div>  
-    </section>
+    </form>
     <footer>
         <p>&copy; 2022 #vanlife</p>
     </footer>
+    <script src="/js/script2.js"></script>
 </body>
 </html>

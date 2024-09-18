@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 
 const vanSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: [true, 'id is a required field'],
-        unique: true
-    },
     name: {
         type: String,
         required: [true, 'name is a required field']
+    },
+    useremail: {
+        type: String,
+        required: [true, 'useremail is a required field']
     },
     image: {
         type: String,

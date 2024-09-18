@@ -1,0 +1,21 @@
+<div class="hostdesc">
+    <img src="{{%image%}}" alt="VANIMAGE" class="listvanimage">
+    <div class="details">
+        <button class="Simple statusbox">{{%status%}}</button>
+        <h2>{{%name%}}</h2>
+        <p class="rate"><span class="prodprice">${{%price%}}</span>/day</p>
+    </div>
+</div>
+
+<nav class="dashboardnav">
+    <li><a href="/host/vans/{{%id%}}" class="currentpage">Details</a></li>
+    <li><a href="/host/vans/{{%id%}}/pricing">Pricing</a></li>
+    <li><a href="/host/vans/{{%id%}}/photos">Photos</a></li>
+</nav>
+
+<div class="specs">
+    <p> <span>Name:</span> {{%name%}}</p>
+    <p> <span>Category:</span> {{%status%}}</p>
+    <p> <span>Description:</span> {{%desc%}}</p>
+    <p><span>Visibility:</span> Public</p>
+</div>

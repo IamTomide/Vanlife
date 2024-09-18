@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Vanlife</title>
+</head>
+<body class="About">
+    <header>
+        <div class="container">
+            <div class="headerdiv">
+                <a href="/home"><h1>#VANLIFE</h1></a>
+                <nav>
+                    <li><a href="/host" class="currentpage">Host</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/vans">Vans</a></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="dashboardnav">
+            <li><a href="/host">Dashboard</a></li>
+            <!-- <li><a href="/host/income">Income</a></li> -->
+            <li><a href="/host/vans" class="currentpage">Vans</a></li>
+            <!-- <li><a href="/host/reviews">Reviews</a></li> -->
+        </nav>
+    </div>
+        
+    <section class="listsect">
+        <div>
+           <div class="headerdiv container heading">
+                <p class="list">Your listed vans</p>
+                <p class="plus" title="Create new van">&#x002B</p>
+            </div> 
+        </div>
+        
+        <div class="listedvans container">
+            <ul>
+                <li class="vanlisted newtemplate hidden">
+                    <div>
+                        <form id="newvan" action="/host/createvan" method="post" enctype="multipart/form-data">
+                            <input type="text" placeholder="Van name" id="name" name="name" required>
+                            <input type="file" placeholder="image" id="image" name="image" accept="image/*" required>
+                            <input type="text" placeholder="description" id="description" name="description" required>
+                            <input type="number" placeholder="price" id="price" name="price" required>
+                            <select name="status" id="status" required>
+                                <option value="">Van Status</option>
+                                <option value="Simple">Simple</option>
+                                <option value="Rugged">Rugged</option>
+                                <option value="Luxury">Luxury</option>
+                            </select>
+                            <input type="submit" value="Create Van" class="explore1">
+                        </form>
+                    </div>
+                    
+                </li>
+                {{%content%}}
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 #vanlife</p>
+    </footer>
+    <script src="/js/script3.js"></script>
+</body>
+</html>

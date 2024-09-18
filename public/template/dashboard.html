@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Vanlife</title>
+</head>
+<body class="About">
+    <header>
+        <div class="container">
+            <div class="headerdiv">
+                <a href="/home"><h1>#VANLIFE</h1></a>
+                <nav>
+                    <li><a href="/host" class="currentpage">Host</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="vans">Vans</a></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container headerdiv">
+        <nav class="dashboardnav">
+            <li><a href="" class="currentpage">Dashboard</a></li>
+            <!-- <li><a href="/host/income">Income</a></li> -->
+            <li><a href="/host/vans">Vans</a></li>
+            <!-- <li><a href="/host/reviews">Reviews</a></li> -->
+        </nav>
+        
+    </div>
+        
+    <section class="dashboard">
+        <div class="container">
+            <h2  class="welcome">Welcome!</h2>
+            <div class="income headerdiv">
+                <p>Income last <a href="">30 days</a></p>
+                <p>Details</p>
+            </div>
+            <h2>${{%income%}}</h2>
+        </div>
+        <div class="review">
+            <div class="headerdiv container">
+                <p>Review score <span class="star">&starf;</span><span class="score">5.0</span><span class="total">/5</span></p>
+                <p>Details</p>
+            </div>               
+        </div>
+    </section>
+        
+    <section class="listsect">
+        <div>
+           <div class="headerdiv container">
+                <p class="list">Your listed vans</p>
+                <a href="/host/vans" class="viewall"><p class="view">View all</p></a>
+            </div> 
+        </div>
+        
+        <div class="listedvans container">
+            <ul>
+                {{%content%}}
+            </ul>
+            <a href="/logout"><p class="view logout">Logout</p></a>
+        </div>
+        
+    </section>
+    
+    </div>
+
+    <footer>
+        <p>&copy; 2022 #vanlife</p>
+    </footer>
+    
+</body>
+</html>
