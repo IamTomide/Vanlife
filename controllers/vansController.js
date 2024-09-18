@@ -31,17 +31,17 @@ exports.getAllVans = async(req, res) => {
         }else{
             query = query.sort('id');
         }
-        const page = req.query.page*1 || 1;
-        const limit = req.query.limit*1 || 10;
-        const skip = (page-1) * limit;
-        query = query.skip(skip).limit(limit);
+        // const page = req.query.page*1 || 1;
+        // const limit = req.query.limit*1 || 10;
+        // const skip = (page-1) * limit;
+        // query = query.skip(skip).limit(limit);
 
-        if(req.query.page){
-            const vansCount = await Van.countDocuments();
-            if (skip >= vansCount) {
-                throw new Error("This page is not found!");
-            }
-        }
+        // if(req.query.page){
+        //     const vansCount = await Van.countDocuments();
+        //     if (skip >= vansCount) {
+        //         throw new Error("This page is not found!");
+        //     }
+        // }
 
         const vans = await query;
         res.status(200).json({
