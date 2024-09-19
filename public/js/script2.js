@@ -26,7 +26,7 @@ async function newuserauth(e) {
             window.location.href = '/host';
         }
         else {
-            window.location.href = 'http://127.0.0.1:3000/signin';
+            window.location.href = '/signin';
         }
     } catch(error){
         console.error('Error: ', error);

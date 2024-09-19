@@ -31,5 +31,46 @@ const vanSchema = new mongoose.Schema({
 
 const Van = mongoose.model('Van', vanSchema);
 
+Van.findvan = function (query) {
+    try{
+        const van = Van.find(query);
+        return van;
+    }catch(err){
+        return err.message;
+    }
+}
+Van.callvanbyid = function (id) {
+    try{
+        const van = Van.findById(id);
+        return van;
+    }catch(err){
+        return err.message;
+    }
+}
+
+Van.updatevan = function (userId, updateData) {
+    try {
+      const updatedvan = Van.findByIdAndUpdate(
+        userId,          
+        updateData,
+        {
+          new: true,    
+          runValidators: true 
+        });
+        return updatedvan;
+    } catch (error) {
+      console.error('Error updating van:', error);
+    }
+  }
+
+  Van.createnewvan = async function (body) {
+    try{
+        const van = Van.create(body);
+        return van;
+    }catch(err){
+        return err.message;
+    }
+  }
+
 module.exports = Van;
 

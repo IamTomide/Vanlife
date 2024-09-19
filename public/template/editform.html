@@ -4,7 +4,7 @@
             <!-- <input type="hidden" name="_method" value="PATCH"> -->
             <input type="text" value="{{%name%}}" id="name" name="name" required>
             <input type="file" value="{{%image%}}" id="image" name="image" accept="image/*" required>
-            <input type="text" value="{{%desc%}}" id="description" name="description" required>
+            <textarea type="text" value="" id="description" name="description" required rows="3">{{%desc%}}</textarea>
             <input type="number" value="{{%price%}}" id="price" name="price" required>
             <select name="status" id="status" required>
                 <option value="">Van Status</option>
