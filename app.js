@@ -2,6 +2,7 @@ const fs = require('fs');
 const express = require('express');
 let app = express();
 app.use(express.json());
+require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const path = require('path');
